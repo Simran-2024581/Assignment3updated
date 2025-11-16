@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BrewByte Menu"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Menu Item Template -->
+        <!-- CAPPUCCINO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:backgroundTint="@android:color/white"
+            android:clipToOutline="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cappuccino"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$4.50"
+                android:textSize="16sp"
+                android:layout_marginEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnAddCappuccino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD" />
+        </LinearLayout>
+
+        <!-- TEA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tea"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$3.00"
+                android:textSize="16sp"
+                android:layout_marginEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnAddTea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD" />
+        </LinearLayout>
+
+        <!-- Sandwich -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sandwich"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$5.50"
+                android:textSize="16sp"
+                android:layout_marginEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnAddSandwich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD" />
+        </LinearLayout>
+
+        <!-- Pastry -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pastry"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$3.99"
+                android:textSize="16sp"
+                android:layout_marginEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnAddPastry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD" />
+        </LinearLayout>
+
+        <!-- NAVIGATION BUTTONS -->
+        <Button
+            android:id="@+id/btnCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Cart"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btnOrderHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order History"
+            android:layout_marginTop="10dp"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_marginTop="10dp"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>

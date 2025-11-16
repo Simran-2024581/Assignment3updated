@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Dashboard"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/edtOrderId"
+            android:hint="Enter Order ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnLoadOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Load Order"
+            android:layout_marginTop="8dp" />
+
+        <!-- Show which order is loaded -->
+        <TextView
+            android:id="@+id/txtLoadedId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order ID: -"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/txtCurrentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current: -"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnPending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mark Pending"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btnPreparing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mark Preparing"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/btnReady"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mark Ready"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coffeeCream"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <Button
+                android:id="@+id/btnBackToMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffeeLight"
+                android:textColor="@color/coffeeButtonText"
+                android:text="Back"
+                android:padding="8dp"
+                android:layout_marginEnd="16dp"
+                android:drawablePadding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Status"
+                android:textSize="24sp"
+                android:textColor="@color/coffeeBrown"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Order Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/coffeeLight"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:clipToOutline="true"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/txtOrderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order ID: -"
+                android:textColor="@color/coffeeBrown"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Items will appear here"
+                android:textColor="@color/coffeeDark" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Total: $"
+                android:textColor="@color/coffeeDark" />
+
+            <TextView
+                android:id="@+id/txtPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Payment:"
+                android:textColor="@color/coffeeDark" />
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Status:"
+                android:textColor="@color/coffeeDark" />
+        </LinearLayout>
+
+        <!-- Optional: Add more details or buttons here -->
+
+    </LinearLayout>
+
+</ScrollView>

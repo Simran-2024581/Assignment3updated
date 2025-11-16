@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coffeeCream"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:text="Back"
+            android:background="@drawable/rounded_btn"
+            android:textColor="@color/coffeeButtonText" />
+
+        <!-- Page Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/coffeeDark"
+            android:paddingTop="20dp" />
+
+        <!-- Items List -->
+        <TextView
+            android:id="@+id/txtItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:background="@drawable/rounded_card"
+            android:textColor="@color/coffeeDark"
+            android:text="Items" />
+
+        <!-- Total Price -->
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/coffeeBrown" />
+
+        <!-- Payment Method Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Method"
+            android:textSize="18sp"
+            android:textColor="@color/coffeeDark"
+            android:paddingTop="20dp" />
+
+        <!-- Payment Options -->
+        <RadioGroup
+            android:id="@+id/paymentGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbCash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash on Pickup"
+                android:textColor="@color/coffeeDark" />
+
+            <RadioButton
+                android:id="@+id/rbCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit / Debit Card"
+                android:textColor="@color/coffeeDark" />
+        </RadioGroup>
+
+        <!-- Place Order Button -->
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:text="Place Order"
+            android:textColor="@color/coffeeButtonText"
+            android:background="@drawable/rounded_btn" />
+
+    </LinearLayout>
+</ScrollView>
