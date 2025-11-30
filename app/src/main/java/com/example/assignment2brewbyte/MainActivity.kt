@@ -41,12 +41,29 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, CartActivity::class.java))
         }
 
-        binding.btnOrderHistory.setOnClickListener {
-            startActivity(Intent(this, OrderHistoryActivity::class.java))
+        binding.btnMap.setOnClickListener {
+            startActivity(Intent(this, MapActivity::class.java))
         }
 
-        binding.btnProfile.setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
+        // NEW: Open Camera from Home
+        binding.btnCamera.setOnClickListener {
+            startActivity(Intent(this, CameraActivity::class.java))
+        }
+
+        // Bottom navigation: Home / Orders / Profile
+        binding.bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> true // already here
+                R.id.nav_orders -> {
+                    startActivity(Intent(this, OrderHistoryActivity::class.java))
+                    true
+                }
+                R.id.nav_profile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    true
+                }
+                else -> false
+            }
         }
     }
 }

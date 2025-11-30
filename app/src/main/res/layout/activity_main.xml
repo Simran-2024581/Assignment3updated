@@ -1,183 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F7F3FF">
 
-    <LinearLayout
+    <!-- TOP LOGO -->
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/brewbytelogo"
+        android:contentDescription="@string/logo_desc"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- TITLE -->
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:text="@string/menu_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#3D2A4F"
+        android:layout_marginBottom="16dp" />
 
-        <!-- Title -->
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="BrewByte Menu"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginBottom="20dp" />
+    <!-- SCROLL AREA (MENU ITEMS) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <!-- Menu Item Template -->
-        <!-- CAPPUCCINO -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:background="@android:color/white"
-            android:elevation="4dp"
-            android:layout_marginBottom="12dp"
-            android:gravity="center_vertical"
-            android:backgroundTint="@android:color/white"
-            android:clipToOutline="true">
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="0dp"
+            <!-- CAPPUCCINO -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Cappuccino"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:padding="14dp"
+                android:background="@android:color/white"
+                android:elevation="3dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginHorizontal="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$4.50"
-                android:textSize="16sp"
-                android:layout_marginEnd="12dp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/item_cappuccino"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#3A2F45" />
 
-            <Button
-                android:id="@+id/btnAddCappuccino"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_cappuccino"
+                    android:textSize="15sp"
+                    android:textColor="#6A5A7E"
+                    android:layout_marginEnd="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddCappuccino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingHorizontal="20dp"
+                    android:text="@string/btn_add"
+                    android:backgroundTint="#7752FE"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <!-- TEA -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ADD" />
+                android:padding="14dp"
+                android:background="@android:color/white"
+                android:elevation="3dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginHorizontal="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/item_tea"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#3A2F45" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_tea"
+                    android:textSize="15sp"
+                    android:textColor="#6A5A7E"
+                    android:layout_marginEnd="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddTea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingHorizontal="20dp"
+                    android:text="@string/btn_add"
+                    android:backgroundTint="#7752FE"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <!-- SANDWICH -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@android:color/white"
+                android:elevation="3dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginHorizontal="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/item_sandwich"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#3A2F45" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_sandwich"
+                    android:textSize="15sp"
+                    android:textColor="#6A5A7E"
+                    android:layout_marginEnd="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddSandwich"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingHorizontal="20dp"
+                    android:text="@string/btn_add"
+                    android:backgroundTint="#7752FE"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <!-- PASTRY -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@android:color/white"
+                android:elevation="3dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/item_pastry"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#3A2F45" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_pastry"
+                    android:textSize="15sp"
+                    android:textColor="#6A5A7E"
+                    android:layout_marginEnd="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddPastry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingHorizontal="20dp"
+                    android:text="@string/btn_add"
+                    android:backgroundTint="#7752FE"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
         </LinearLayout>
+    </ScrollView>
 
-        <!-- TEA -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:background="@android:color/white"
-            android:elevation="4dp"
-            android:layout_marginBottom="12dp"
-            android:gravity="center_vertical">
+    <!-- VIEW CART BUTTON -->
+    <Button
+        android:id="@+id/btnCart"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/btn_cart"
+        android:backgroundTint="#5C3AFF"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="8dp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Tea"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+    <!-- MAP BUTTON (same ID as before) -->
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/btn_find_us"
+        android:backgroundTint="#5C3AFF"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="8dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$3.00"
-                android:textSize="16sp"
-                android:layout_marginEnd="12dp" />
+    <!-- CAMERA BUTTON (same ID as before) -->
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/btn_open_camera"
+        android:backgroundTint="#5C3AFF"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="8dp" />
 
-            <Button
-                android:id="@+id/btnAddTea"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ADD" />
-        </LinearLayout>
+    <!-- BOTTOM NAV STAYS AT BOTTOM -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E0D5FF"
+        app:menu="@menu/bottom_nav" />
 
-        <!-- Sandwich -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:background="@android:color/white"
-            android:elevation="4dp"
-            android:layout_marginBottom="12dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Sandwich"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$5.50"
-                android:textSize="16sp"
-                android:layout_marginEnd="12dp" />
-
-            <Button
-                android:id="@+id/btnAddSandwich"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ADD" />
-        </LinearLayout>
-
-        <!-- Pastry -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:background="@android:color/white"
-            android:elevation="4dp"
-            android:layout_marginBottom="20dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Pastry"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$3.99"
-                android:textSize="16sp"
-                android:layout_marginEnd="12dp" />
-
-            <Button
-                android:id="@+id/btnAddPastry"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ADD" />
-        </LinearLayout>
-
-        <!-- NAVIGATION BUTTONS -->
-        <Button
-            android:id="@+id/btnCart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View Cart"
-            android:padding="12dp" />
-
-        <Button
-            android:id="@+id/btnOrderHistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Order History"
-            android:layout_marginTop="10dp"
-            android:padding="12dp" />
-
-        <Button
-            android:id="@+id/btnProfile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Profile"
-            android:layout_marginTop="10dp"
-            android:padding="12dp" />
-
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>

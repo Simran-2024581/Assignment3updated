@@ -1,6 +1,8 @@
 package com.example.assignment2brewbyte
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.assignment2brewbyte.databinding.ActivityOrderHistoryBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -66,5 +68,31 @@ class OrderHistoryActivity : AppCompatActivity() {
             .addOnFailureListener { e ->
                 binding.txtHistory.text = "Error loading orders: ${e.message}"
             }
+
+        // -------- BOTTOM NAV BAR --------
+        // highlight Orders tab
+        binding.bottomNav.selectedItemId = R.id.nav_orders
+
+        binding.bottomNav.setOnItemSelectedListener { item: MenuItem ->
+            when (item.itemId) {
+
+                R.id.nav_home -> {
+                    startActivity(Intent(this, MainActivity::class.java))
+                    true
+                }
+
+                R.id.nav_orders -> {
+                    // Already here
+                    true
+                }
+
+                R.id.nav_profile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    true
+                }
+
+                else -> false
+            }
+        }
     }
 }

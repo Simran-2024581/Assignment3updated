@@ -17,7 +17,7 @@
             android:id="@+id/btnBack"
             android:layout_width="80dp"
             android:layout_height="40dp"
-            android:text="Back"
+            android:text="@string/back"
             android:background="@drawable/rounded_btn"
             android:textColor="@color/coffeeButtonText" />
 
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Your Cart"
+            android:text="@string/cart_title"
             android:textStyle="bold"
             android:textColor="@color/coffeeDark"
             android:textSize="22sp" />
@@ -40,7 +40,7 @@
         android:layout_marginTop="16dp"
         android:padding="14dp"
         android:background="@drawable/rounded_card"
-        android:text="Your cart is empty"
+        android:text="@string/cart_empty"
         android:textColor="@color/coffeeDark" />
 
     <!-- Total Price -->
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Total: $0.00"
+        android:text="@string/cart_total_default"
         android:textStyle="bold"
         android:textSize="18sp"
         android:textColor="@color/coffeeBrown" />
@@ -66,7 +66,7 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="Clear Cart"
+            android:text="@string/btn_clear_cart"
             android:background="@drawable/rounded_btn"
             android:textColor="@color/coffeeCream" />
 
@@ -76,7 +76,7 @@
             android:layout_height="48dp"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
-            android:text="Checkout"
+            android:text="@string/btn_checkout"
             android:background="@drawable/rounded_btn"
             android:textColor="@color/coffeeCream" />
     </LinearLayout>
